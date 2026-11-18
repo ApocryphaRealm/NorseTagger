@@ -1,0 +1,6 @@
+Reason: NorseTagger 0.1.0 tags loaded assets by class (parents included), name, folder, field and other tags; NorseDistributor's Tag: filters picked exactly the tagged unit types.
+Batch B-20261117-211701-95cb, 2026-11-17 21:17-21:20 (Main Agent). One launch.
+- CombatTestMap: NorseDistributor asked NorseTagger to tag first (NT_Apply, "asked by another framework"), then NorseTagger's own map-load pass: HeavyWeapon 0 (no heavy axe or spear loaded on this map), OneHanded 2 via the parent class ItemAsset_Weapon_OneHanded, Weapon 3 (Unique_Axe_01, Unique_Shield_01, Unique_Sword_01 - Norse's shield is an off-hand weapon), Brigand 7 (Profiles:Brigands), Basic 2 (Basic_Brute_Veteran, Basic_Warrior; the archer excluded), BrigandOrBasic 9 (Tag: filters inside the tagger), NoSuchClassTag 0.
+- NorseDistributor on the shared NorseFilters: ShieldSlam by Tag:Brigand -> 6 changed + 1 already = the 7 Brigand types; Commander by Tag:BrigandOrBasic minus Tag:Brigand -> Basic_Brute_Veteran only (the Basic types loaded at that moment).
+- nt.list Weapon / Basic and nt.tags Outcast_Nithing ("Brigand, BrigandOrBasic") answered in the log. Console commands sent during the "press any key" screen ran once it was passed.
+- Close-down: waited for Root Builder to remove the deployed ue4ss folder before closing MO2 (the 2026-11-17 lesson).
