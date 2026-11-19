@@ -5,7 +5,7 @@ keyword list (only passives and units carry gameplay-tag "special effects"), so 
 tags to loaded data assets - items, unit types, abilities - and other frameworks filter on them with `Tag:Name`.
 Together with NorseDistributor it is Skyrim's KID + SPID pair: tag things, then distribute by tag.
 
-From the framework list in `4. plans\norse-realtime-combat-20261116\ASSESSMENT-AND-PLAN.md` ("NorseTagger (KID-like)").
+From the framework list in the Norse overhaul plan ("NorseTagger (KID-like)").
 
 ## Rules
 
@@ -25,8 +25,8 @@ examples `docs\examples\`. Using a tag elsewhere (NorseDistributor):
 ## For other frameworks
 
 Exports `int NT_HasTag(void* obj, const char* tag)` and `void NT_Apply()` (tag this map's assets now). The shared
-`../NorsePatcher/include/NorseFilters.hpp` finds them and answers `Tag:` filters, and calls `NT_Apply` first, so the
-order the mods load in does not matter. Console: `nt.list <tag>`, `nt.tags <object path>`, `nt.reload`, `nt.apply`.
+`../NorsePatcher/include/NorseFilters.hpp` finds them and answers `Tag:` filters. NorseDistributor calls `NT_Apply` before it distributes, so its
+`Tag:` rules work whichever of the two loads first. Console: `nt.list <tag>`, `nt.tags <object path>`, `nt.reload`, `nt.apply`.
 
 Not yet: real gameplay tags written into the game's own containers (passive SpecialEffects) - tags here are
 NorseTagger's own. Applies to assets loaded when the map loads.

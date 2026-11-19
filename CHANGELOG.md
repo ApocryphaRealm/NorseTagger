@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.0.0 - 2026-11-18 - untested
+## 1.0.0 - 2026-11-18 - working
 
 ### Added
 - First release. It contains everything built and tested in 0.1.0, listed here and kept as history below:
