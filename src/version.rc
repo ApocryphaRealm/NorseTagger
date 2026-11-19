@@ -1,0 +1,32 @@
+// main.dll's VERSIONINFO (rule 6: a build carries its own number).
+// NORSE_VER_MAJOR / _MINOR / _PATCH / NORSE_VER_STR come from xmake.lua's `local version`, which only version-gate writes.
+#include <winres.h>
+
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION NORSE_VER_MAJOR, NORSE_VER_MINOR, NORSE_VER_PATCH, 0
+PRODUCTVERSION NORSE_VER_MAJOR, NORSE_VER_MINOR, NORSE_VER_PATCH, 0
+FILEFLAGSMASK 0x3fL
+FILEFLAGS 0x0L
+FILEOS VOS_NT_WINDOWS32
+FILETYPE VFT_DLL
+FILESUBTYPE VFT2_UNKNOWN
+BEGIN
+	BLOCK "StringFileInfo"
+	BEGIN
+		BLOCK "040904b0"
+		BEGIN
+			VALUE "CompanyName", "ApocryphaRealm"
+			VALUE "FileDescription", "Norse Tagger (UE4SS mod for NORSE: Oath of Blood)"
+			VALUE "FileVersion", NORSE_VER_STR
+			VALUE "InternalName", "NorseTagger"
+			VALUE "LegalCopyright", "GPL-3.0-or-later"
+			VALUE "OriginalFilename", "main.dll"
+			VALUE "ProductName", "Norse Tagger"
+			VALUE "ProductVersion", NORSE_VER_STR
+		END
+	END
+	BLOCK "VarFileInfo"
+	BEGIN
+		VALUE "Translation", 0x409, 1200
+	END
+END
