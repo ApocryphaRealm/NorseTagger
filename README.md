@@ -34,3 +34,7 @@ NorseTagger's own. Applies to assets loaded when the map loads.
 ## Build
 
 `xmake f -p windows -a x64 -m release --toolchain=msvc -y`, then `xmake` (needs `../NorsePatcher` and `../NorseManifest`).
+
+## Licence
+
+GPL-3.0-or-later (see LICENSE).
